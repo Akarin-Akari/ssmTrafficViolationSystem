@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.DaduiguanliDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.entity.DaduiguanliEntity" id="daduiguanliMap">
+        <result property="daduiduiming" column="daduiduiming"/>
+        <result property="zhiduizhaopian" column="zhiduizhaopian"/>
+        <result property="daduididian" column="daduididian"/>
+        <result property="daduiduizhang" column="daduiduizhang"/>
+        <result property="lianxidianhua" column="lianxidianhua"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.entity.vo.DaduiguanliVO" >
+		SELECT * FROM daduiguanli  daduiguanli         
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.entity.vo.DaduiguanliVO" >
+		SELECT  daduiguanli.* FROM daduiguanli  daduiguanli
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.entity.view.DaduiguanliView" >
+
+		SELECT  daduiguanli.* FROM daduiguanli  daduiguanli 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.entity.view.DaduiguanliView" >
+		SELECT * FROM daduiguanli  daduiguanli <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	
+</mapper>

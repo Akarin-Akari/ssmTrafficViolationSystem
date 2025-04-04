@@ -1,0 +1,18 @@
+autoDetectedPackages:
+- com.annotation
+- com.config
+- com.controller
+- com.dao
+- com.entity
+- com.interceptor
+- com.model.enums
+- com.service
+- com.utils
+enableAutoDetect: true
+ignoreSameClassCall: null
+ignoreSamePackageCall: null
+includedPackagePrefixes:
+- ''
+- ''
+includedParentClasses: null
+name: xcodemap-filter
